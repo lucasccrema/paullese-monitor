@@ -2,7 +2,7 @@ name: Paullese Monitor - raccolta
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/5 15-17 * * 1-5'
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-          TRAFFIC_PROVIDER:  disabled
+          TRAFFIC_PROVIDER: disabled
           ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_ADMIN_CHAT_IDS: ${{ vars.TELEGRAM_ADMIN_CHAT_IDS }}
