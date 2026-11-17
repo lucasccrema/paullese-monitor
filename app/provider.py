@@ -1,3 +1,4 @@
+# Creato il: 2026-11-17 12:39
 """Google Routes API v2 provider for the evening Paullese route.
 
 This module fetches live route information and returns it in memory.
@@ -39,6 +40,10 @@ class GoogleRoutesError(RuntimeError):
     """Raised when Google Routes cannot provide a valid response."""
 
 
+class ProviderNotConfigured(GoogleRoutesError):
+    """Raised when the provider lacks required configuration (e.g. API key)."""
+
+
 def _location(point: tuple[str, float, float]) -> dict[str, Any]:
     _, lat, lng = point
     return {"location": {"latLng": {"latitude": lat, "longitude": lng}}}
@@ -56,7 +61,7 @@ def fetch_segment_durations(api_key: str | None = None) -> list[dict[str, Any]]:
     """Fetch the 14 live leg durations; results remain in memory only."""
     key = api_key or os.getenv("GOOGLE_MAPS_API_KEY", "").strip()
     if not key:
-        raise GoogleRoutesError(
+        raise ProviderNotConfigured(
             "GOOGLE_MAPS_API_KEY non configurata. Impostare la variabile d'ambiente."
         )
 
