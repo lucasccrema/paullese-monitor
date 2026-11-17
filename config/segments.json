@@ -1,0 +1,156 @@
+{
+  "direction": "San Donato → Crema",
+  "points": [
+    {
+      "id": 1,
+      "name": "Semaforo di Bugliano",
+      "lat": 45.422099,
+      "lon": 9.282389
+    },
+    {
+      "id": 2,
+      "name": "Confluenza Zeloforamagno",
+      "lat": 45.427529,
+      "lon": 9.315989
+    },
+    {
+      "id": 3,
+      "name": "Punto Pantigliate",
+      "lat": 45.43009,
+      "lon": 9.346976
+    },
+    {
+      "id": 4,
+      "name": "Confluenza Caleppio",
+      "lat": 45.428594,
+      "lon": 9.380019
+    },
+    {
+      "id": 5,
+      "name": "Silos",
+      "lat": 45.427226,
+      "lon": 9.395182
+    },
+    {
+      "id": 6,
+      "name": "Rondò TEEM Paullo",
+      "lat": 45.418792,
+      "lon": 9.42609
+    },
+    {
+      "id": 7,
+      "name": "Semaforo Zelo BP",
+      "lat": 45.416216,
+      "lon": 9.431733
+    },
+    {
+      "id": 8,
+      "name": "Confluenza Quartieri",
+      "lat": 45.4067,
+      "lon": 9.446636
+    },
+    {
+      "id": 9,
+      "name": "Ingresso Spino",
+      "lat": 45.402336,
+      "lon": 9.469861
+    },
+    {
+      "id": 10,
+      "name": "Uscita Dovera",
+      "lat": 45.385844,
+      "lon": 9.54493
+    },
+    {
+      "id": 11,
+      "name": "Uscita Vaiano",
+      "lat": 45.37943,
+      "lon": 9.589031
+    },
+    {
+      "id": 12,
+      "name": "Uscita Bagnolo",
+      "lat": 45.364094,
+      "lon": 9.631819
+    },
+    {
+      "id": 13,
+      "name": "Mezzo Via Milano",
+      "lat": 45.359472,
+      "lon": 9.646279
+    },
+    {
+      "id": 14,
+      "name": "Rondò Coop",
+      "lat": 45.359988,
+      "lon": 9.664386
+    }
+  ],
+  "segments": [
+    {
+      "id": 1,
+      "from_point": 1,
+      "to_point": 2
+    },
+    {
+      "id": 2,
+      "from_point": 2,
+      "to_point": 3
+    },
+    {
+      "id": 3,
+      "from_point": 3,
+      "to_point": 4
+    },
+    {
+      "id": 4,
+      "from_point": 4,
+      "to_point": 5
+    },
+    {
+      "id": 5,
+      "from_point": 5,
+      "to_point": 6
+    },
+    {
+      "id": 6,
+      "from_point": 6,
+      "to_point": 7
+    },
+    {
+      "id": 7,
+      "from_point": 7,
+      "to_point": 8
+    },
+    {
+      "id": 8,
+      "from_point": 8,
+      "to_point": 9
+    },
+    {
+      "id": 9,
+      "from_point": 9,
+      "to_point": 10
+    },
+    {
+      "id": 10,
+      "from_point": 10,
+      "to_point": 11
+    },
+    {
+      "id": 11,
+      "from_point": 11,
+      "to_point": 12
+    },
+    {
+      "id": 12,
+      "from_point": 12,
+      "to_point": 13
+    },
+    {
+      "id": 13,
+      "from_point": 13,
+      "to_point": 14
+    }
+  ]
+}
