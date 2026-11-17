@@ -24,6 +24,7 @@ jobs:
       - name: Run collector
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
           TRAFFIC_PROVIDER:  disabled
           ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
