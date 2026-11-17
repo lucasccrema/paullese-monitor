@@ -1,0 +1,31 @@
+name: Paullese Monitor - raccolta
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run collector
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          TRAFFIC_PROVIDER: ${{ vars.TRAFFIC_PROVIDER }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_ADMIN_CHAT_IDS: ${{ vars.TELEGRAM_ADMIN_CHAT_IDS }}
+        run: python -m app.collector
