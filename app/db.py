@@ -1,3 +1,4 @@
+# Creato il: 2026-11-17 22:50
 from .config import DATABASE_URL
 
 SCHEMA = """
@@ -10,6 +11,10 @@ CREATE TABLE IF NOT EXISTS segment_observations (
  segment_id INTEGER NOT NULL, duration_seconds INTEGER NOT NULL,
  baseline_seconds INTEGER, deviation_pct DOUBLE PRECISION
 );
+-- Colonne aggiunte in seguito: modifiche solo additive, le righe già presenti restano valide (valore NULL).
+ALTER TABLE segment_observations ADD COLUMN IF NOT EXISTS static_duration_seconds INTEGER;
+ALTER TABLE segment_observations ADD COLUMN IF NOT EXISTS request_started_at TIMESTAMPTZ;
+ALTER TABLE segment_observations ADD COLUMN IF NOT EXISTS response_received_at TIMESTAMPTZ;
 CREATE INDEX IF NOT EXISTS idx_observations_segment_time ON segment_observations(segment_id, observed_at DESC);
 CREATE TABLE IF NOT EXISTS alert_events (
  id BIGSERIAL PRIMARY KEY, created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
