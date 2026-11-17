@@ -3,7 +3,7 @@
 Prima base del monitoraggio comunitario della SS415, direzione serale San Donato → Crema.
 
 ## Cosa contiene
-- 14 punti GPS e 13 segmenti consecutivi.
+- 15 punti GPS e 14 segmenti consecutivi.
 - Modello di configurazione dei pendolari: orario per giorno, smart working e intervallo ferie.
 - Motore iniziale di confronto con baseline, con soglie configurabili.
 - Registro tecnico di rilevazioni, anomalie e invii.
