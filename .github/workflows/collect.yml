@@ -1,8 +1,6 @@
 name: Paullese Monitor - raccolta
 
 on:
-  schedule:
-    - cron: '*/15 16-17 * * 1-5'
   workflow_dispatch:
 
 permissions:
